@@ -2,7 +2,7 @@ import pandas as pd
 from paddleocr import PaddleOCR #, draw_ocr
 
 def test_ocr():
-    ocr = PaddleOCR(det_model_dir="/Volumes/SHIMIN/数据集/ocr/ch_ppocr_server_v2.0_det_infer", use_angle_cls=True, lang="ch", gpu_mem=4000) # need to run only once to download and load model into memory
+    ocr = PaddleOCR(use_angle_cls=True, lang="ch", gpu_mem=4000) # need to run only once to download and load model into memory
     img_path = 'https://schbrain-image-dev.schbrain.com/question-cut-7698c54ae8ad4b758cdc.png'
     # img_path = '/Users/vr/浙大研究院/img/question-cut-7698c54ae8ad4b758cdc.png'
     result = ocr.ocr(img_path, rec=False)
