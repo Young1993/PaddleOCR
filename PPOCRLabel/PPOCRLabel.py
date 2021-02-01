@@ -108,7 +108,7 @@ class MainWindow(QMainWindow, WindowMixin):
         getStr = lambda strId: self.stringBundle.getString(strId)
 
         self.defaultSaveDir = defaultSaveDir
-        self.ocr = PaddleOCR(use_pdserving=False, use_angle_cls=True, det=True, cls=True, use_gpu=False, lang=lang)
+        self.ocr = PaddleOCR(det_model_dir="/Volumes/SHIMIN/数据集/ocr/models/ch_ppocr_server_v2.0_det_infer",rec_model_dir="/Volumes/SHIMIN/数据集/ocr/models/ch_ppocr_server_v2.0_rec_infer", use_pdserving=False, use_angle_cls=True, det=True, cls=True, use_gpu=False, lang=lang)
 
         if os.path.exists('./data/paddle.png'):
             result = self.ocr.ocr('./data/paddle.png', cls=True, det=True)
