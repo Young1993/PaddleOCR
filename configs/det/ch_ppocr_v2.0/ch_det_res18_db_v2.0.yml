@@ -11,8 +11,8 @@ Global:
   #    from static branch, load_static_weights must be set as True.
   # 2. If you want to finetune the pretrained models we provide in the docs,
   #    you should set load_static_weights as False.
-  load_static_weights: True
-  cal_metric_during_train: False
+  load_static_weights: False
+  cal_metric_during_train: False # default False
   pretrained_model: ./pretrain_models/ResNet18_vd_pretrained
   checkpoints:
   save_inference_dir:
