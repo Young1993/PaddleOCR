@@ -11,7 +11,7 @@ Global:
   #    from static branch, load_static_weights must be set as True.
   # 2. If you want to finetune the pretrained models we provide in the docs,
   #    you should set load_static_weights as False.
-  load_static_weights: True
+  load_static_weights: False
   cal_metric_during_train: False
   pretrained_model: ./pretrain_models/ResNet50_vd_ssld_pretrained
   checkpoints:
